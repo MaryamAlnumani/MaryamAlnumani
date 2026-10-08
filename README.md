@@ -10,6 +10,12 @@ I build practical digital solutions where technology, data and business meet.
 
 <br>
 
+<a href="https://maryamalnumani.github.io/MaryamAlnumani/">
+<img src="https://img.shields.io/badge/VIEW_MY_PORTFOLIO-BF9BDE?style=for-the-badge&labelColor=000000">
+</a>
+
+<br><br>
+
 <img src="https://img.shields.io/badge/BUILD-BACKEND-BF9BDE?style=for-the-badge&labelColor=000000">
 <img src="https://img.shields.io/badge/ANALYZE-DATA-C9A7E8?style=for-the-badge&labelColor=000000">
 <img src="https://img.shields.io/badge/CONNECT-IOT-6FA8DC?style=for-the-badge&labelColor=000000">
@@ -23,6 +29,7 @@ I build practical digital solutions where technology, data and business meet.
 
 <table>
 <tr>
+
 <td align="center" width="25%">
 
 <img src="https://img.shields.io/badge/BUILD-BF9BDE?style=for-the-badge&labelColor=000000">
@@ -77,6 +84,7 @@ Qiskit
 Innovation
 
 </td>
+
 </tr>
 </table>
 
@@ -87,8 +95,11 @@ Innovation
 <div align="center">
 
 <img src="https://img.shields.io/badge/02-FEATURED_PROJECTS-BF9BDE?style=for-the-badge&labelColor=111111">
+
 <img src="https://img.shields.io/badge/05-IoT_DASHBOARDS-6FA8DC?style=for-the-badge&labelColor=111111">
+
 <img src="https://img.shields.io/badge/11%2B-CERTIFICATIONS-C9A7E8?style=for-the-badge&labelColor=111111">
+
 <img src="https://img.shields.io/badge/01-MARITIME_SYSTEM-8E7CC3?style=for-the-badge&labelColor=111111">
 
 </div>
@@ -173,11 +184,7 @@ RESTful book review API with authentication, structured endpoints and database i
 
 <img src="https://img.shields.io/badge/BUSINESS_%C3%97_TECHNOLOGY-BF9BDE?style=for-the-badge&labelColor=000000">
 
-&nbsp;&nbsp;
-
 <img src="https://img.shields.io/badge/DATA_%C3%97_SYSTEMS-C9A7E8?style=for-the-badge&labelColor=000000">
-
-&nbsp;&nbsp;
 
 <img src="https://img.shields.io/badge/INNOVATION_%C3%97_EMERGING_TECH-6FA8DC?style=for-the-badge&labelColor=000000">
 
