@@ -1,0 +1,2214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Maryam Alnumani — MIS | Digital Builder</title>
+
+<meta name="description"
+content="Maryam Alnumani — Management Information Systems graduate building digital solutions across backend development, data, IoT, AI and emerging technology.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+rel="stylesheet">
+
+<style>
+
+/* =========================================================
+RESET
+========================================================= */
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+background: #08070b;
+color: #f4eff8;
+font-family: "Inter", sans-serif;
+overflow-x: hidden;
+}
+
+a {
+color: inherit;
+text-decoration: none;
+}
+
+button {
+font-family: inherit;
+}
+
+
+/* =========================================================
+VARIABLES
+========================================================= */
+
+:root {
+--bg: #08070b;
+--bg-soft: #0d0b12;
+--panel: rgba(18, 15, 25, 0.72);
+--panel-light: rgba(28, 23, 38, 0.68);
+
+--lavender: #bf9bde;
+--lavender-light: #d9c1ef;
+--lavender-dark: #9270ad;
+
+--white: #f8f4fb;
+--muted: #a8a0ae;
+--muted-dark: #6f6877;
+
+--line: rgba(191, 155, 222, 0.14);
+--line-strong: rgba(191, 155, 222, 0.28);
+
+--green: #8be0b0;
+--blue: #83b8ff;
+}
+
+
+/* =========================================================
+BACKGROUND
+========================================================= */
+
+body::before {
+content: "";
+position: fixed;
+inset: 0;
+pointer-events: none;
+z-index: -5;
+
+background:
+radial-gradient(
+circle at 15% 10%,
+rgba(191, 155, 222, 0.11),
+transparent 28%
+),
+radial-gradient(
+circle at 85% 25%,
+rgba(94, 78, 130, 0.10),
+transparent 30%
+),
+radial-gradient(
+circle at 50% 100%,
+rgba(191, 155, 222, 0.06),
+transparent 30%
+);
+}
+
+body::after {
+content: "";
+position: fixed;
+inset: 0;
+pointer-events: none;
+z-index: -4;
+opacity: 0.18;
+
+background-image:
+linear-gradient(rgba(255,255,255,.018) 1px, transparent 1px),
+linear-gradient(90deg, rgba(255,255,255,.018) 1px, transparent 1px);
+
+background-size: 70px 70px;
+}
+
+
+/* =========================================================
+NAVIGATION
+========================================================= */
+
+nav {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+
+height: 82px;
+
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+padding: 0 6vw;
+
+background: rgba(8, 7, 11, 0.62);
+backdrop-filter: blur(18px);
+
+border-bottom: 1px solid rgba(255,255,255,0.04);
+
+z-index: 100;
+}
+
+.logo {
+font-family: "Space Grotesk", sans-serif;
+font-size: 18px;
+font-weight: 700;
+letter-spacing: -0.04em;
+}
+
+.logo span {
+color: var(--lavender);
+}
+
+.nav-links {
+display: flex;
+gap: 34px;
+align-items: center;
+}
+
+.nav-links a {
+font-size: 11px;
+letter-spacing: 0.16em;
+color: var(--muted);
+transition: .3s ease;
+}
+
+.nav-links a:hover {
+color: var(--white);
+}
+
+
+/* =========================================================
+GENERAL
+========================================================= */
+
+.container {
+width: min(1180px, 88%);
+margin: auto;
+}
+
+section {
+padding: 120px 0;
+}
+
+.eyebrow {
+color: var(--lavender);
+font-size: 10px;
+letter-spacing: .24em;
+font-weight: 600;
+text-transform: uppercase;
+}
+
+.section-title {
+margin-top: 12px;
+
+font-family: "Space Grotesk", sans-serif;
+font-size: clamp(38px, 5vw, 66px);
+line-height: .98;
+letter-spacing: -0.055em;
+}
+
+.section-description {
+max-width: 600px;
+margin-top: 20px;
+
+color: var(--muted);
+font-size: 15px;
+line-height: 1.8;
+}
+
+
+/* =========================================================
+HERO
+========================================================= */
+
+.hero {
+min-height: 100vh;
+
+display: flex;
+align-items: center;
+
+padding-top: 120px;
+position: relative;
+}
+
+.hero-grid {
+display: grid;
+grid-template-columns: 1.15fr .85fr;
+gap: 70px;
+align-items: center;
+}
+
+.hero-label {
+display: inline-flex;
+align-items: center;
+gap: 10px;
+
+padding: 8px 13px;
+
+border: 1px solid var(--line);
+border-radius: 999px;
+
+background: rgba(191,155,222,.035);
+
+color: var(--muted);
+
+font-size: 10px;
+letter-spacing: .13em;
+}
+
+.status-dot {
+width: 6px;
+height: 6px;
+
+border-radius: 50%;
+background: var(--green);
+
+box-shadow: 0 0 12px rgba(139,224,176,.7);
+}
+
+.hero h1 {
+margin-top: 25px;
+
+font-family: "Space Grotesk", sans-serif;
+font-size: clamp(60px, 9vw, 126px);
+line-height: .82;
+
+letter-spacing: -0.075em;
+}
+
+.hero h1 span {
+color: var(--lavender);
+}
+
+.hero-role {
+margin-top: 28px;
+
+font-family: "Space Grotesk", sans-serif;
+font-size: clamp(17px, 2vw, 24px);
+color: var(--white);
+
+letter-spacing: -0.02em;
+}
+
+.hero-role span {
+color: var(--lavender);
+}
+
+.hero-text {
+max-width: 610px;
+margin-top: 22px;
+
+color: var(--muted);
+font-size: 15px;
+line-height: 1.85;
+}
+
+.hero-actions {
+display: flex;
+gap: 12px;
+flex-wrap: wrap;
+
+margin-top: 34px;
+}
+
+.button {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+
+padding: 13px 19px;
+
+border: 1px solid var(--line-strong);
+border-radius: 5px;
+
+font-size: 10px;
+letter-spacing: .14em;
+
+transition: .3s ease;
+}
+
+.button.primary {
+background: var(--lavender);
+color: #100b14;
+border-color: var(--lavender);
+}
+
+.button:hover {
+transform: translateY(-2px);
+border-color: var(--lavender);
+}
+
+.button.primary:hover {
+box-shadow: 0 12px 35px rgba(191,155,222,.18);
+}
+
+
+/* =========================================================
+HERO RADAR
+========================================================= */
+
+.radar-wrapper {
+position: relative;
+width: min(430px, 100%);
+aspect-ratio: 1;
+margin-left: auto;
+}
+
+.radar {
+position: absolute;
+inset: 0;
+
+border-radius: 50%;
+
+border: 1px solid rgba(191,155,222,.18);
+
+background:
+radial-gradient(
+circle,
+rgba(191,155,222,.07) 0 2%,
+transparent 2.2% 25%,
+rgba(191,155,222,.04) 25.2% 25.6%,
+transparent 25.8% 50%,
+rgba(191,155,222,.04) 50.2% 50.6%,
+transparent 50.8% 75%,
+rgba(191,155,222,.04) 75.2% 75.6%,
+transparent 75.8%
+);
+
+box-shadow:
+0 0 80px rgba(191,155,222,.07),
+inset 0 0 80px rgba(191,155,222,.04);
+
+overflow: hidden;
+}
+
+.radar::before {
+content: "";
+
+position: absolute;
+inset: 50% auto auto 0;
+
+width: 100%;
+height: 1px;
+
+background: var(--line);
+}
+
+.radar::after {
+content: "";
+
+position: absolute;
+
+width: 50%;
+height: 1px;
+
+left: 50%;
+top: 50%;
+
+transform-origin: left center;
+
+background: linear-gradient(
+90deg,
+rgba(191,155,222,.9),
+transparent
+);
+
+animation: radarSweep 5s linear infinite;
+}
+
+@keyframes radarSweep {
+from {
+transform: rotate(0deg);
+}
+
+to {
+transform: rotate(360deg);
+}
+}
+
+.radar-line-vertical {
+position: absolute;
+
+top: 0;
+bottom: 0;
+left: 50%;
+
+width: 1px;
+
+background: var(--line);
+}
+
+.radar-center {
+position: absolute;
+
+left: 50%;
+top: 50%;
+
+width: 8px;
+height: 8px;
+
+transform: translate(-50%, -50%);
+
+background: var(--lavender);
+border-radius: 50%;
+
+box-shadow: 0 0 22px rgba(191,155,222,.9);
+}
+
+.radar-point {
+position: absolute;
+
+width: 7px;
+height: 7px;
+
+border-radius: 50%;
+
+background: var(--lavender);
+
+box-shadow: 0 0 16px rgba(191,155,222,.8);
+
+animation: pointPulse 2.5s ease-in-out infinite;
+}
+
+.point-1 {
+top: 27%;
+left: 68%;
+}
+
+.point-2 {
+top: 65%;
+left: 24%;
+animation-delay: .8s;
+}
+
+.point-3 {
+top: 73%;
+left: 72%;
+animation-delay: 1.3s;
+}
+
+@keyframes pointPulse {
+0%, 100% {
+transform: scale(1);
+opacity: .65;
+}
+
+50% {
+transform: scale(1.6);
+opacity: 1;
+}
+}
+
+.radar-label {
+position: absolute;
+
+font-size: 8px;
+letter-spacing: .16em;
+color: var(--muted-dark);
+}
+
+.radar-label.top {
+top: 8%;
+left: 50%;
+transform: translateX(-50%);
+}
+
+.radar-label.bottom {
+bottom: 8%;
+left: 50%;
+transform: translateX(-50%);
+}
+
+.radar-label.left {
+left: 8%;
+top: 50%;
+transform: translateY(-50%);
+}
+
+.radar-label.right {
+right: 8%;
+top: 50%;
+transform: translateY(-50%);
+}
+
+.radar-info {
+position: absolute;
+
+bottom: 15px;
+left: 15px;
+
+padding: 12px 14px;
+
+background: rgba(8,7,11,.72);
+backdrop-filter: blur(12px);
+
+border: 1px solid var(--line);
+
+font-size: 9px;
+letter-spacing: .1em;
+color: var(--muted);
+}
+
+.radar-info strong {
+display: block;
+margin-bottom: 4px;
+
+color: var(--lavender-light);
+font-size: 10px;
+}
+
+
+/* =========================================================
+IDENTITY STRIP
+========================================================= */
+
+.identity-strip {
+border-top: 1px solid var(--line);
+border-bottom: 1px solid var(--line);
+
+padding: 24px 0;
+}
+
+.identity-items {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+}
+
+.identity-item {
+padding: 5px 25px;
+
+border-right: 1px solid var(--line);
+}
+
+.identity-item:first-child {
+padding-left: 0;
+}
+
+.identity-item:last-child {
+border-right: none;
+}
+
+.identity-number {
+color: var(--lavender);
+font-family: "Space Grotesk", sans-serif;
+font-size: 24px;
+font-weight: 600;
+}
+
+.identity-text {
+margin-top: 4px;
+
+color: var(--muted);
+font-size: 9px;
+letter-spacing: .15em;
+}
+
+
+/* =========================================================
+DASHBOARD
+========================================================= */
+
+.dashboard {
+margin-top: 55px;
+
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 15px;
+}
+
+.dash-card {
+position: relative;
+
+padding: 28px;
+
+border: 1px solid var(--line);
+border-radius: 8px;
+
+background: linear-gradient(
+145deg,
+rgba(24,20,32,.72),
+rgba(12,10,16,.75)
+);
+
+overflow: hidden;
+
+transition: .35s ease;
+}
+
+.dash-card::before {
+content: "";
+
+position: absolute;
+width: 180px;
+height: 180px;
+
+top: -100px;
+right: -90px;
+
+border-radius: 50%;
+
+background: rgba(191,155,222,.06);
+filter: blur(25px);
+}
+
+.dash-card:hover {
+transform: translateY(-4px);
+border-color: var(--line-strong);
+}
+
+.dash-card.large {
+grid-column: span 2;
+}
+
+.dash-top {
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+margin-bottom: 24px;
+}
+
+.dash-title {
+font-family: "Space Grotesk", sans-serif;
+font-size: 15px;
+}
+
+.dash-status {
+color: var(--green);
+font-size: 8px;
+letter-spacing: .13em;
+}
+
+.dash-status::before {
+content: "●";
+margin-right: 6px;
+}
+
+
+/* =========================================================
+CAPABILITIES
+========================================================= */
+
+.capability-grid {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 12px;
+}
+
+.capability {
+min-height: 205px;
+
+padding: 22px;
+
+border: 1px solid var(--line);
+background: rgba(255,255,255,.012);
+
+transition: .35s ease;
+}
+
+.capability:hover {
+background: rgba(191,155,222,.045);
+border-color: var(--line-strong);
+transform: translateY(-4px);
+}
+
+.cap-number {
+color: var(--lavender-dark);
+font-size: 10px;
+letter-spacing: .14em;
+}
+
+.capability h3 {
+margin-top: 45px;
+
+font-family: "Space Grotesk", sans-serif;
+font-size: 22px;
+letter-spacing: -.04em;
+}
+
+.capability p {
+margin-top: 12px;
+
+color: var(--muted);
+font-size: 11px;
+line-height: 1.7;
+}
+
+.cap-tags {
+margin-top: 18px;
+
+display: flex;
+flex-wrap: wrap;
+gap: 5px;
+}
+
+.cap-tags span {
+padding: 5px 7px;
+
+border: 1px solid var(--line);
+
+color: var(--muted-dark);
+
+font-size: 7px;
+letter-spacing: .06em;
+}
+
+
+/* =========================================================
+TECH STACK
+========================================================= */
+
+.tech-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 15px;
+
+margin-top: 50px;
+}
+
+.tech-card {
+padding: 28px;
+
+border: 1px solid var(--line);
+background: rgba(255,255,255,.012);
+}
+
+.tech-heading {
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+margin-bottom: 25px;
+}
+
+.tech-heading h3 {
+font-family: "Space Grotesk", sans-serif;
+font-size: 17px;
+}
+
+.tech-heading span {
+color: var(--muted-dark);
+font-size: 8px;
+letter-spacing: .13em;
+}
+
+.tech-row {
+margin-bottom: 20px;
+}
+
+.tech-label {
+display: flex;
+justify-content: space-between;
+
+margin-bottom: 8px;
+
+font-size: 10px;
+color: var(--muted);
+}
+
+.tech-bar {
+height: 4px;
+
+background: rgba(255,255,255,.06);
+
+overflow: hidden;
+}
+
+.tech-fill {
+height: 100%;
+
+background: linear-gradient(
+90deg,
+var(--lavender-dark),
+var(--lavender)
+);
+
+transform-origin: left;
+animation: fillBar 1.4s ease both;
+}
+
+@keyframes fillBar {
+from {
+transform: scaleX(0);
+}
+
+to {
+transform: scaleX(1);
+}
+}
+
+.language-list {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 9px;
+}
+
+.language {
+padding: 13px;
+
+border: 1px solid var(--line);
+
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+transition: .3s ease;
+}
+
+.language:hover {
+border-color: var(--line-strong);
+}
+
+.language strong {
+font-family: "Space Grotesk", sans-serif;
+font-size: 12px;
+}
+
+.language span {
+color: var(--lavender);
+font-size: 8px;
+}
+
+
+/* =========================================================
+PROJECTS
+========================================================= */
+
+.projects {
+margin-top: 55px;
+
+display: grid;
+grid-template-columns: 1.45fr .8fr;
+gap: 15px;
+}
+
+.project {
+position: relative;
+
+min-height: 370px;
+
+padding: 32px;
+
+border: 1px solid var(--line);
+
+background:
+radial-gradient(
+circle at 85% 20%,
+rgba(191,155,222,.09),
+transparent 30%
+),
+rgba(18,15,24,.65);
+
+overflow: hidden;
+
+transition: .35s ease;
+}
+
+.project:hover {
+transform: translateY(-5px);
+border-color: var(--line-strong);
+}
+
+.project.small {
+min-height: 370px;
+}
+
+.project-number {
+position: absolute;
+right: 25px;
+top: 25px;
+
+color: rgba(191,155,222,.2);
+
+font-family: "Space Grotesk", sans-serif;
+font-size: 45px;
+font-weight: 700;
+}
+
+.project-type {
+color: var(--lavender);
+font-size: 8px;
+letter-spacing: .2em;
+}
+
+.project h3 {
+max-width: 550px;
+
+margin-top: 65px;
+
+font-family: "Space Grotesk", sans-serif;
+font-size: clamp(27px, 4vw, 48px);
+line-height: .95;
+letter-spacing: -.055em;
+}
+
+.project.small h3 {
+font-size: 30px;
+}
+
+.project p {
+max-width: 570px;
+margin-top: 18px;
+
+color: var(--muted);
+font-size: 12px;
+line-height: 1.8;
+}
+
+.project-meta {
+display: flex;
+flex-wrap: wrap;
+gap: 7px;
+
+margin-top: 25px;
+}
+
+.project-meta span {
+padding: 7px 9px;
+
+border: 1px solid var(--line);
+
+color: var(--muted-dark);
+
+font-size: 7px;
+letter-spacing: .1em;
+}
+
+.project-link {
+position: absolute;
+
+left: 32px;
+bottom: 28px;
+
+color: var(--white);
+
+font-size: 9px;
+letter-spacing: .13em;
+
+transition: .3s ease;
+}
+
+.project-link:hover {
+color: var(--lavender);
+}
+
+
+/* =========================================================
+WHY MIS
+========================================================= */
+
+.intersection {
+margin-top: 55px;
+
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 15px;
+}
+
+.intersection-card {
+padding: 38px;
+
+border: 1px solid var(--line);
+background: rgba(255,255,255,.012);
+}
+
+.intersection-symbol {
+font-family: "Space Grotesk", sans-serif;
+font-size: 42px;
+color: var(--lavender);
+}
+
+.intersection-card h3 {
+margin-top: 30px;
+
+font-family: "Space Grotesk", sans-serif;
+font-size: 26px;
+letter-spacing: -.04em;
+}
+
+.intersection-card p {
+margin-top: 14px;
+
+color: var(--muted);
+font-size: 12px;
+line-height: 1.9;
+}
+
+
+/* =========================================================
+EDUCATION
+========================================================= */
+
+.education {
+margin-top: 50px;
+
+padding: 28px 0;
+
+border-top: 1px solid var(--line);
+border-bottom: 1px solid var(--line);
+
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 30px;
+}
+
+.education-main h3 {
+font-family: "Space Grotesk", sans-serif;
+font-size: 21px;
+}
+
+.education-main p {
+margin-top: 6px;
+
+color: var(--muted);
+font-size: 11px;
+}
+
+.education-year {
+color: var(--lavender);
+
+font-family: "Space Grotesk", sans-serif;
+font-size: 30px;
+}
+
+
+/* =========================================================
+CONTACT
+========================================================= */
+
+.contact {
+min-height: 65vh;
+
+display: flex;
+align-items: center;
+}
+
+.contact-box {
+position: relative;
+
+width: 100%;
+
+padding: 65px;
+
+border: 1px solid var(--line);
+
+background:
+radial-gradient(
+circle at 85% 50%,
+rgba(191,155,222,.09),
+transparent 35%
+),
+rgba(18,15,24,.6);
+
+overflow: hidden;
+}
+
+.contact-box h2 {
+max-width: 800px;
+
+margin-top: 15px;
+
+font-family: "Space Grotesk", sans-serif;
+font-size: clamp(42px, 6vw, 76px);
+line-height: .95;
+letter-spacing: -.06em;
+}
+
+.contact-box p {
+max-width: 580px;
+
+margin-top: 22px;
+
+color: var(--muted);
+line-height: 1.8;
+font-size: 13px;
+}
+
+.contact-links {
+display: flex;
+gap: 10px;
+flex-wrap: wrap;
+
+margin-top: 30px;
+}
+
+
+/* =========================================================
+FOOTER
+========================================================= */
+
+footer {
+padding: 30px 0 45px;
+
+border-top: 1px solid var(--line);
+}
+
+.footer-inner {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.footer-name {
+font-family: "Space Grotesk", sans-serif;
+font-size: 12px;
+}
+
+.footer-note {
+color: var(--muted-dark);
+font-size: 8px;
+letter-spacing: .12em;
+}
+
+
+/* =========================================================
+REVEAL
+========================================================= */
+
+.reveal {
+opacity: 0;
+transform: translateY(25px);
+transition:
+opacity .8s ease,
+transform .8s ease;
+}
+
+.reveal.visible {
+opacity: 1;
+transform: translateY(0);
+}
+
+
+/* =========================================================
+RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+.hero-grid {
+grid-template-columns: 1fr;
+}
+
+.radar-wrapper {
+width: min(360px, 90vw);
+margin: 30px auto 0;
+}
+
+.identity-items {
+grid-template-columns: repeat(2, 1fr);
+row-gap: 20px;
+}
+
+.identity-item:nth-child(2) {
+border-right: none;
+}
+
+.capability-grid {
+grid-template-columns: repeat(2, 1fr);
+}
+
+.tech-grid {
+grid-template-columns: 1fr;
+}
+
+.projects {
+grid-template-columns: 1fr;
+}
+
+.intersection {
+grid-template-columns: 1fr;
+}
+
+.project.small {
+min-height: 320px;
+}
+}
+
+
+@media (max-width: 600px) {
+
+nav {
+height: 68px;
+padding: 0 6%;
+}
+
+.nav-links {
+gap: 16px;
+}
+
+.nav-links a {
+font-size: 8px;
+}
+
+section {
+padding: 85px 0;
+}
+
+.hero {
+padding-top: 100px;
+}
+
+.hero h1 {
+font-size: clamp(57px, 18vw, 90px);
+}
+
+.hero-text {
+font-size: 13px;
+}
+
+.radar-wrapper {
+width: 290px;
+}
+
+.identity-items {
+grid-template-columns: 1fr 1fr;
+}
+
+.identity-item {
+padding: 5px 15px;
+}
+
+.identity-item:first-child {
+padding-left: 0;
+}
+
+.capability-grid {
+grid-template-columns: 1fr;
+}
+
+.capability {
+min-height: 180px;
+}
+
+.dashboard {
+grid-template-columns: 1fr;
+}
+
+.dash-card.large {
+grid-column: span 1;
+}
+
+.language-list {
+grid-template-columns: 1fr;
+}
+
+.project {
+min-height: 390px;
+padding: 25px;
+}
+
+.project-link {
+left: 25px;
+}
+
+.contact-box {
+padding: 35px 25px;
+}
+
+.education {
+align-items: flex-start;
+flex-direction: column;
+}
+
+.footer-inner {
+gap: 15px;
+align-items: flex-start;
+flex-direction: column;
+}
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+NAVIGATION
+========================================================= -->
+
+<nav>
+
+<a href="#" class="logo">
+MARYAM<span>.</span>
+</a>
+
+<div class="nav-links">
+<a href="#capabilities">CAPABILITIES</a>
+<a href="#stack">STACK</a>
+<a href="#work">WORK</a>
+<a href="#contact">CONTACT</a>
+</div>
+
+</nav>
+
+
+
+<!-- =========================================================
+HERO
+========================================================= -->
+
+<main>
+
+<section class="hero">
+
+<div class="container">
+
+<div class="hero-grid">
+
+<div>
+
+<div class="hero-label">
+<span class="status-dot"></span>
+OPEN TO DIGITAL OPPORTUNITIES
+</div>
+
+
+<h1>
+MARYAM<span>.</span>
+</h1>
+
+
+<div class="hero-role">
+MIS GRADUATE <span>·</span> DIGITAL BUILDER
+</div>
+
+
+<p class="hero-text">
+I build practical digital solutions where
+<strong>technology, data and business</strong>
+meet — from backend systems and analytics
+to IoT, artificial intelligence and emerging technology.
+</p>
+
+
+<div class="hero-actions">
+
+<a href="#work" class="button primary">
+EXPLORE MY WORK →
+</a>
+
+<a href="https://github.com/MaryamAlnumani"
+target="_blank"
+class="button">
+GITHUB ↗
+</a>
+
+<a href="https://www.linkedin.com/in/maryamalnumani/"
+target="_blank"
+class="button">
+LINKEDIN ↗
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- RADAR -->
+
+<div class="radar-wrapper">
+
+<div class="radar">
+
+<div class="radar-line-vertical"></div>
+
+<div class="radar-center"></div>
+
+<div class="radar-point point-1"></div>
+<div class="radar-point point-2"></div>
+<div class="radar-point point-3"></div>
+
+<div class="radar-label top">N</div>
+<div class="radar-label bottom">S</div>
+<div class="radar-label left">W</div>
+<div class="radar-label right">E</div>
+
+</div>
+
+
+<div class="radar-info">
+
+<strong>DIGITAL SYSTEMS / 01</strong>
+
+BACKEND · DATA · IoT · AI
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+IDENTITY STRIP
+===================================================== -->
+
+<div class="identity-strip">
+
+<div class="container">
+
+<div class="identity-items">
+
+<div class="identity-item">
+
+<div class="identity-number">02</div>
+
+<div class="identity-text">
+FEATURED PROJECTS
+</div>
+
+</div>
+
+
+<div class="identity-item">
+
+<div class="identity-number">05</div>
+
+<div class="identity-text">
+IoT DASHBOARDS
+</div>
+
+</div>
+
+
+<div class="identity-item">
+
+<div class="identity-number">11+</div>
+
+<div class="identity-text">
+CERTIFICATIONS
+</div>
+
+</div>
+
+
+<div class="identity-item">
+
+<div class="identity-number">01</div>
+
+<div class="identity-text">
+MARITIME SYSTEM
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- =====================================================
+CAPABILITIES
+===================================================== -->
+
+<section id="capabilities">
+
+<div class="container">
+
+<div class="eyebrow">
+WHAT I BUILD
+</div>
+
+<h2 class="section-title">
+Four ways I<br>
+create value.
+</h2>
+
+<p class="section-description">
+My background in Management Information Systems allows me
+to connect business thinking with practical technology.
+</p>
+
+
+<div class="capability-grid reveal">
+
+<div class="capability">
+
+<div class="cap-number">
+01 / BUILD
+</div>
+
+<h3>Backend</h3>
+
+<p>
+Designing APIs and backend systems
+that turn ideas into functional products.
+</p>
+
+<div class="cap-tags">
+<span>PYTHON</span>
+<span>DJANGO</span>
+<span>DRF</span>
+<span>JWT</span>
+</div>
+
+</div>
+
+
+
+<div class="capability">
+
+<div class="cap-number">
+02 / ANALYZE
+</div>
+
+<h3>Data</h3>
+
+<p>
+Turning raw information into insights
+that support better decisions.
+</p>
+
+<div class="cap-tags">
+<span>SQL</span>
+<span>POWER BI</span>
+<span>EXCEL</span>
+<span>ANALYTICS</span>
+</div>
+
+</div>
+
+
+
+<div class="capability">
+
+<div class="cap-number">
+03 / CONNECT
+</div>
+
+<h3>IoT</h3>
+
+<p>
+Connecting devices, telemetry and
+intelligent dashboards into real systems.
+</p>
+
+<div class="cap-tags">
+<span>CUMULOCITY</span>
+<span>IoT</span>
+<span>DASHBOARDS</span>
+</div>
+
+</div>
+
+
+
+<div class="capability">
+
+<div class="cap-number">
+04 / EXPLORE
+</div>
+
+<h3>Emerging Tech</h3>
+
+<p>
+Exploring AI and quantum computing
+to understand the technology shaping tomorrow.
+</p>
+
+<div class="cap-tags">
+<span>AI</span>
+<span>QUANTUM</span>
+<span>QISKIT</span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+TECH STACK
+===================================================== -->
+
+<section id="stack">
+
+<div class="container">
+
+<div class="eyebrow">
+TECHNICAL PROFILE
+</div>
+
+<h2 class="section-title">
+My stack,<br>
+at a glance.
+</h2>
+
+
+<div class="tech-grid reveal">
+
+
+<!-- LANGUAGES -->
+
+<div class="tech-card">
+
+<div class="tech-heading">
+
+<h3>Languages</h3>
+
+<span>CORE</span>
+
+</div>
+
+
+<div class="language-list">
+
+<div class="language">
+<strong>Python</strong>
+<span>01</span>
+</div>
+
+<div class="language">
+<strong>SQL</strong>
+<span>02</span>
+</div>
+
+<div class="language">
+<strong>HTML / CSS</strong>
+<span>03</span>
+</div>
+
+<div class="language">
+<strong>JavaScript</strong>
+<span>04</span>
+</div>
+
+<div class="language">
+<strong>Swift</strong>
+<span>05</span>
+</div>
+
+<div class="language">
+<strong>Java</strong>
+<span>06</span>
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- SKILLS -->
+
+<div class="tech-card">
+
+<div class="tech-heading">
+
+<h3>Technical Skills</h3>
+
+<span>PROFILE</span>
+
+</div>
+
+
+<div class="tech-row">
+
+<div class="tech-label">
+<span>Backend Development</span>
+<span>90%</span>
+</div>
+
+<div class="tech-bar">
+<div class="tech-fill"
+style="width:90%"></div>
+</div>
+
+</div>
+
+
+<div class="tech-row">
+
+<div class="tech-label">
+<span>Data & Analytics</span>
+<span>88%</span>
+</div>
+
+<div class="tech-bar">
+<div class="tech-fill"
+style="width:88%"></div>
+</div>
+
+</div>
+
+
+<div class="tech-row">
+
+<div class="tech-label">
+<span>IoT Systems</span>
+<span>82%</span>
+</div>
+
+<div class="tech-bar">
+<div class="tech-fill"
+style="width:82%"></div>
+</div>
+
+</div>
+
+
+<div class="tech-row">
+
+<div class="tech-label">
+<span>AI & Emerging Tech</span>
+<span>76%</span>
+</div>
+
+<div class="tech-bar">
+<div class="tech-fill"
+style="width:76%"></div>
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- TOOLS -->
+
+<div class="tech-card">
+
+<div class="tech-heading">
+
+<h3>Frameworks & Tools</h3>
+
+<span>WORKFLOW</span>
+
+</div>
+
+
+<div class="language-list">
+
+<div class="language">
+<strong>Django</strong>
+<span>API</span>
+</div>
+
+<div class="language">
+<strong>DRF</strong>
+<span>API</span>
+</div>
+
+<div class="language">
+<strong>Postman</strong>
+<span>TEST</span>
+</div>
+
+<div class="language">
+<strong>Power BI</strong>
+<span>DATA</span>
+</div>
+
+<div class="language">
+<strong>Git</strong>
+<span>VCS</span>
+</div>
+
+<div class="language">
+<strong>GitHub</strong>
+<span>CODE</span>
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- TECHNOLOGY -->
+
+<div class="tech-card">
+
+<div class="tech-heading">
+
+<h3>Emerging Technology</h3>
+
+<span>EXPLORE</span>
+
+</div>
+
+
+<div class="language-list">
+
+<div class="language">
+<strong>Artificial Intelligence</strong>
+<span>AI</span>
+</div>
+
+<div class="language">
+<strong>Quantum Computing</strong>
+<span>QC</span>
+</div>
+
+<div class="language">
+<strong>Qiskit</strong>
+<span>IBM</span>
+</div>
+
+<div class="language">
+<strong>Cumulocity IoT</strong>
+<span>IoT</span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+WORK
+===================================================== -->
+
+<section id="work">
+
+<div class="container">
+
+<div class="eyebrow">
+SELECTED WORK
+</div>
+
+<h2 class="section-title">
+Systems I've<br>
+built.
+</h2>
+
+<p class="section-description">
+A selection of projects where I combined software,
+data, IoT and problem-solving to build practical systems.
+</p>
+
+
+<div class="projects reveal">
+
+
+<!-- RED SEA -->
+
+<article class="project">
+
+<div class="project-number">
+01
+</div>
+
+<div class="project-type">
+IoT · AI · MARITIME TECHNOLOGY
+</div>
+
+<h3>
+RED SEA<br>
+RESCUE GRID
+</h3>
+
+<p>
+A predictive maritime safety system built with
+Cumulocity IoT, simulated vessel telemetry,
+environmental data and intelligent risk monitoring.
+</p>
+
+<div class="project-meta">
+
+<span>CUMULOCITY IoT</span>
+<span>ANALYTICS BUILDER</span>
+<span>05 DASHBOARDS</span>
+<span>PREDICTIVE RISK</span>
+
+</div>
+
+<a
+href="https://github.com/MaryamAlnumani/RED-SEA-RESCUE-GRID"
+target="_blank"
+class="project-link">
+
+VIEW PROJECT ↗
+
+</a>
+
+</article>
+
+
+
+<!-- BOOK REVIEW -->
+
+<article class="project small">
+
+<div class="project-number">
+02
+</div>
+
+<div class="project-type">
+BACKEND · API
+</div>
+
+<h3>
+FINAL<br>
+BOOK REVIEW
+</h3>
+
+<p>
+RESTful backend API built with Django REST Framework,
+JWT authentication and SQLite.
+</p>
+
+<div class="project-meta">
+
+<span>PYTHON</span>
+<span>DJANGO</span>
+<span>DRF</span>
+<span>JWT</span>
+
+</div>
+
+<a
+href="https://github.com/MaryamAlnumani/FinalBookReview"
+target="_blank"
+class="project-link">
+
+VIEW PROJECT ↗
+
+</a>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+MIS INTERSECTION
+===================================================== -->
+
+<section>
+
+<div class="container">
+
+<div class="eyebrow">
+THE DIFFERENCE
+</div>
+
+<h2 class="section-title">
+Why MIS<br>
+matters.
+</h2>
+
+
+<div class="intersection reveal">
+
+
+<div class="intersection-card">
+
+<div class="intersection-symbol">
+∩
+</div>
+
+<h3>
+Business × Technology
+</h3>
+
+<p>
+I don't approach technology in isolation.
+My MIS background helps me understand the
+business problem first, then translate it
+into a practical digital solution.
+</p>
+
+</div>
+
+
+
+<div class="intersection-card">
+
+<div class="intersection-symbol">
++
+</div>
+
+<h3>
+Data × Systems
+</h3>
+
+<p>
+From SQL and analytics to backend APIs and IoT,
+I enjoy working across different layers of a
+system and connecting them into one solution.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="education reveal">
+
+<div class="education-main">
+
+<h3>
+BSc Management Information Systems
+</h3>
+
+<p>
+King Abdulaziz University · Jeddah, Saudi Arabia
+</p>
+
+</div>
+
+<div class="education-year">
+2023
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+CONTACT
+===================================================== -->
+
+<section id="contact" class="contact">
+
+<div class="container">
+
+<div class="contact-box reveal">
+
+<div class="eyebrow">
+LET'S CONNECT
+</div>
+
+<h2>
+Let's build something
+meaningful.
+</h2>
+
+<p>
+Interested in digital transformation, backend systems,
+data, IoT or emerging technology? I'd love to connect.
+</p>
+
+
+<div class="contact-links">
+
+<a
+href="https://github.com/MaryamAlnumani"
+target="_blank"
+class="button primary">
+
+GITHUB ↗
+
+</a>
+
+<a
+href="https://www.linkedin.com/in/maryamalnumani/"
+target="_blank"
+class="button">
+
+LINKEDIN ↗
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+
+
+<!-- =========================================================
+FOOTER
+========================================================= -->
+
+<footer>
+
+<div class="container">
+
+<div class="footer-inner">
+
+<div class="footer-name">
+Maryam Alnumani
+</div>
+
+<div class="footer-note">
+MIS · DIGITAL BUILDER · 2026
+</div>
+
+</div>
+
+</div>
+
+</footer>
+
+
+
+<!-- =========================================================
+JAVASCRIPT — SMOOTH REVEAL
+========================================================= -->
+
+<script>
+
+const revealElements =
+document.querySelectorAll(".reveal");
+
+const observer =
+new IntersectionObserver(
+(entries) => {
+
+entries.forEach((entry) => {
+
+if (entry.isIntersecting) {
+
+entry.target.classList.add("visible");
+
+observer.unobserve(entry.target);
+
+}
+
+});
+
+},
+{
+threshold: 0.12
+}
+);
+
+
+revealElements.forEach((element) => {
+
+observer.observe(element);
+
+});
+
+</script>
+
+</body>
+</html>
